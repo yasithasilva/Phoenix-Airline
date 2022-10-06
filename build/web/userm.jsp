@@ -113,6 +113,7 @@
     <h4>User Information</h4>
   </div>
 <div class="search"><input class="searchbox" type="text" placeholder="Enter User ID" ></div>
+ <div class="border-button"><a href="about.html">Update</a></div>
   <div class="reservation-form">
     <div class="container">
      <div class="row">
