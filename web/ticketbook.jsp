@@ -127,6 +127,18 @@
                <div class="table2">
                 <table>
                     <th>
+                        <tr>
+                        <td>
+                          <label for="Name" class="form-label">Full Name </label>
+                          <input class="box" type="text" name="name" class="Name" placeholder="example" autocomplete="on" required>
+                     </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label for="Name" class="form-label">Passport Number </label>
+                          <input class="box" type="text" name="name" class="Name" placeholder="example" autocomplete="on" required>
+                     </td>
+                      </tr>
                       <tr>
                         <td>
                           <label for="Name" class="form-label">From </label>
