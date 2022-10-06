@@ -11,18 +11,19 @@
            <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>Sign in </title>
+    <title>Sign in staff</title>
     <link rel="icon" type="image/x-icon" href="assets/images/icon.png" >
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Additional CSS Files -->
+    <script src="https://kit.fontawesome.com/b8742f4821.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="asse/ts/css/templatemo-woox-travel.css">
-    <link rel="stylesheet" href="assetscss/owl.css">
+    <link rel="stylesheet" href="assets/css/templatemo-woox-travel.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 
