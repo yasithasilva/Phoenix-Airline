@@ -148,7 +148,7 @@ public final class adminsignin_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("  <div class=\"reservation-form\">\n");
       out.write("    <div class=\"container\">\n");
       out.write("      <div class=\"topic\">\n");
-      out.write("        <h4>Sign in Admin</h4>\n");
+      out.write("        <h4>Sign in as Admin</h4>\n");
       out.write("      </div>\n");
       out.write("      <div class=\"row\">\n");
       out.write("        <tabel>\n");
