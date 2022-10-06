@@ -115,7 +115,7 @@
     <h4>Ticket Information</h4>
   </div>
 <div class="search"><input class="searchbox" type="text" placeholder="Enter Flight ID" ></div>
- <div class="border-button"><a href="about.html">Update</a></div>
+    <center><div class="border-button"><a href="about.html">Search</a></div></center>
   <div class="reservation-form">
     <div class="container">
      <div class="row">
