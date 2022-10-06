@@ -127,10 +127,22 @@
                <div class="table2">
                 <table>
                     <th>
+                            <tr>
+                        <td>
+                          <label for="Name" class="form-label">User Name </label>
+                          <input class="box" type="text" name="name" class="Name" placeholder="nimal silva" autocomplete="on" required>
+                     </td>
+                      </tr>
                         <tr>
                         <td>
                           <label for="Name" class="form-label">Full Name </label>
                           <input class="box" type="text" name="name" class="Name" placeholder="nimal silva" autocomplete="on" required>
+                     </td>
+                      </tr>
+                          <tr>
+                        <td>
+                          <label for="Name" class="form-label">E-mail </label>
+                          <input class="box" type="text" name="name" class="Name" placeholder="nimal silva@example" autocomplete="on" required>
                      </td>
                       </tr>
                       <tr>
@@ -149,7 +161,7 @@
                     <tr>
                       <td>
                         <label for="Name" class="form-label">To</label>
-                        <input class="box" type="text" name="email" class="name" placeholder="example@123" autocomplete="on" required>
+                        <input class="box" type="text" name="email" class="name" placeholder="example" autocomplete="on" required>
                     </td>
                     </tr>
                     <tr>
