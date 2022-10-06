@@ -130,13 +130,13 @@
                         <tr>
                         <td>
                           <label for="Name" class="form-label">Full Name </label>
-                          <input class="box" type="text" name="name" class="Name" placeholder="example" autocomplete="on" required>
+                          <input class="box" type="text" name="name" class="Name" placeholder="nimal silva" autocomplete="on" required>
                      </td>
                       </tr>
                       <tr>
                         <td>
                           <label for="Name" class="form-label">Passport Number </label>
-                          <input class="box" type="text" name="name" class="Name" placeholder="example" autocomplete="on" required>
+                          <input class="box" type="text" name="name" class="Name" placeholder="N-xxxxx" autocomplete="on" required>
                      </td>
                       </tr>
                       <tr>

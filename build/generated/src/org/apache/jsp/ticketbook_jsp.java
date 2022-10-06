@@ -166,6 +166,18 @@ public final class ticketbook_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("               <div class=\"table2\">\r\n");
       out.write("                <table>\r\n");
       out.write("                    <th>\r\n");
+      out.write("                        <tr>\r\n");
+      out.write("                        <td>\r\n");
+      out.write("                          <label for=\"Name\" class=\"form-label\">Full Name </label>\r\n");
+      out.write("                          <input class=\"box\" type=\"text\" name=\"name\" class=\"Name\" placeholder=\"example\" autocomplete=\"on\" required>\r\n");
+      out.write("                     </td>\r\n");
+      out.write("                      </tr>\r\n");
+      out.write("                      <tr>\r\n");
+      out.write("                        <td>\r\n");
+      out.write("                          <label for=\"Name\" class=\"form-label\">Passport Number </label>\r\n");
+      out.write("                          <input class=\"box\" type=\"text\" name=\"name\" class=\"Name\" placeholder=\"example\" autocomplete=\"on\" required>\r\n");
+      out.write("                     </td>\r\n");
+      out.write("                      </tr>\r\n");
       out.write("                      <tr>\r\n");
       out.write("                        <td>\r\n");
       out.write("                          <label for=\"Name\" class=\"form-label\">From </label>\r\n");
