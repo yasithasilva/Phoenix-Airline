@@ -286,13 +286,42 @@
       </div>
     </div>
   </div>
+  
+  <div>
+  <table border="2" class="tab001">
+      <tr>
+          <th>Flight ID </th>
+          <th>Destination</th>
+          <th>Departure Date</th>
+          <th>Chief Pilot</th>
+      </tr>
+      <tr>
+          <td>ex:001</td>
+          <td>Dubai</td>
+          <td>28 OCT</td>
+          <td>John Smith</td>
+      </tr>
+      <tr>
+          <td>ex:002</td>
+          <td>Australia</td>
+          <td>28 OCT</td>
+          <td>Callehen Mark</td>
+      </tr>
+      <tr>
+          <td>ex:003</td>
+          <td>USA</td>
+          <td>30 OCT</td>
+          <td>John Smith</td>
+      </tr>
+  </table>
+  </div>
 
   <footer>
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <p>Copyright © 2036 <a href="#">WoOx Travel</a> Company. All rights reserved. 
-          <br>Design: <a href="https://templatemo.com" target="_blank" title="free CSS templates">TemplateMo</a></p>
+          <p>Copyright © 2022 <a href="#">Phoenix Airline</a> Company. All rights reserved. 
+          <br>Design: <a href="" target="_blank" title="">NSBM Green University</a></p>
         </div>
       </div>
     </div>
