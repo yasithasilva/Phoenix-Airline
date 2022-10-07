@@ -72,7 +72,36 @@ public class gTstaff extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+         String fname=request.getParameter("fname");
+       String lname=request.getParameter("lname");
+       String pswd=request.getParameter("pswd");
+       String addr=request.getParameter("addr");
+        String email=request.getParameter("email");
+        String mobno=request.getParameter("mobno");
+       
+        RequestDispatcher dispatcher=null;
+       
+        try {
+             Statement st ;
+
+                   
+
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/DBWEB?useSSL=false","root","");
+            PreparedStatement pst=con.prepareStatement("insert into userAc(fname,lname,pswd,addr,email,mobno) values (?,?,?,?,?,?)");
+            pst.setString(1, fullname);
+                        pst.setString(2, email);
+                                    pst.setString(3, password);
+                                               
+                                                
+                                                int rowCount = pst.executeUpdate();
+                                                dispatcher=request.getRequestDispatcher("signupstaff.jsp");
+         
+            dispatcher.forward(request, response);
+            
+        } catch (Exception e) {
+        }
+    }
     }
 
     /**
