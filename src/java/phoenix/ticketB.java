@@ -13,10 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author Binath Lakvidu
- */
+
 @WebServlet(name = "ticketB", urlPatterns = {"/ticketB"})
 public class ticketB extends HttpServlet {
 
@@ -58,7 +55,39 @@ public class ticketB extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        // processRequest(request, response);
+          String fname=request.getParameter("fname");
+       String lname=request.getParameter("lname");
+       String pswd=request.getParameter("pswd");
+       String addr=request.getParameter("addr");
+        String email=request.getParameter("email");
+        String mobno=request.getParameter("mobno");
+       
+        RequestDispatcher dispatcher=null;
+       
+        try {
+             Statement st ;
+
+                   
+
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/DBWEB?useSSL=false","root","");
+            PreparedStatement pst=con.prepareStatement("insert into userAc(fname,lname,pswd,addr,email,mobno) values (?,?,?,?,?,?)");
+            pst.setString(1, fname);
+                        pst.setString(2, lname);
+                                    pst.setString(3, pswd);
+                                                pst.setString(4, addr);
+                                                    pst.setString(5, email);
+                                                        pst.setString(4, mobno);
+                                                
+                                                int rowCount = pst.executeUpdate();
+                                                dispatcher=request.getRequestDispatcher("register.jsp");
+         
+            dispatcher.forward(request, response);
+            
+        } catch (Exception e) {
+        }
+    }
     }
 
     /**
@@ -72,7 +101,40 @@ public class ticketB extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        String from=request.getParameter("from");
+       String to=request.getParameter("to");
+       String date=request.getParameter("date");
+       String class=request.getParameter("class");
+        String person=request.getParameter("person");
+        String payment=request.getParameter("payment");
+       
+        RequestDispatcher dispatcher=null;
+       
+        try {
+             Statement st ;
+
+                   
+
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/DBWEB?useSSL=false","root","");
+            PreparedStatement pst=con.prepareStatement("insert into userAc(from,to,date,class,persons,payment) values (?,?,?,?,?,?)");
+            pst.setString(1, from);
+                        pst.setString(2, to);
+                                    pst.setString(3, date);
+                                                pst.setString(4, addr);
+                                                    pst.setString(5, email);
+                                                        pst.setString(4, mobno);
+                                                
+                                                int rowCount = pst.executeUpdate();
+                                                dispatcher=request.getRequestDispatcher("register.jsp");
+         
+            dispatcher.forward(request, response);
+            
+        } catch (Exception e) {
+        }
+    }
+    }
+
     }
 
     /**
