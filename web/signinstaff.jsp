@@ -137,6 +137,16 @@
                         <input class="box" type="password" name="password" class="name" placeholder="1XXX3#4" autocomplete="on" required>
                     </td>
                     </tr>
+                    
+                        <tr>
+                    <td> Position
+                      <select>
+                        <option selected disabled> Choose Class </option>
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option> 
+                      </select>
+                    </td>
+                  </tr>
                 </table>
                     
               </div>                       
