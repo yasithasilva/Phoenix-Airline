@@ -69,9 +69,9 @@ public class ticketB extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String from=request.getParameter("");
-       String to=request.getParameter("");
-       String date=request.getParameter("");
+        String from=request.getParameter("from");
+       String to=request.getParameter("to");
+       String date=request.getParameter("date");
        String class=request.getParameter("class");
         String person=request.getParameter("person");
         String payment=request.getParameter("payment");
@@ -90,7 +90,7 @@ public class ticketB extends HttpServlet {
                         pst.setString(2, to);
                                     pst.setString(3, date);
                                                 pst.setString(4, class);
-                                                    pst.setString(5, persons);
+                                                    pst.setString(5, person);
                                                         pst.setString(4, payment);
                                                 
                                                 int rowCount = pst.executeUpdate();
