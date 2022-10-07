@@ -88,8 +88,8 @@ public class userS extends HttpServlet {
             PreparedStatement pst=con.prepareStatement("insert into user(userid,fullname,email,ticketid) values (?,?,?,?,)");
             pst.setString(1, userid);
                         pst.setString(2, fullname);
-                                    pst.setString(, email);
-                                                pst.setString(, ticketid;
+                                    pst.setString(3, email);
+                                                pst.setString(4, ticketid);
                                                 
                                                 int rowCount = pst.executeUpdate();
                                                 dispatcher=request.getRequestDispatcher("userm.jsp");
