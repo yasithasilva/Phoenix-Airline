@@ -61,7 +61,7 @@ public class userS extends HttpServlet {
         processRequest(request, response);
     }
 
-   
+    /**
      * Handles the HTTP <code>POST</code> method.
      *
      * @param request servlet request
