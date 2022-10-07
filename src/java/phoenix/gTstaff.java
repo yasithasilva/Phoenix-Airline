@@ -72,12 +72,12 @@ public class gTstaff extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-         String fname=request.getParameter("fname");
-       String lname=request.getParameter("lname");
-       String pswd=request.getParameter("pswd");
-       String addr=request.getParameter("addr");
-        String email=request.getParameter("email");
-        String mobno=request.getParameter("mobno");
+         String fullname=request.getParameter("fullname");
+       String email=request.getParameter("email");
+       String pasword=request.getParameter("password");
+       String confirmpassword=request.getParameter("confirmpassword");
+        String grade=request.getParameter("grade");
+       
        
         RequestDispatcher dispatcher=null;
        
@@ -87,11 +87,13 @@ public class gTstaff extends HttpServlet {
                    
 
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/DBWEB?useSSL=false","root","");
-            PreparedStatement pst=con.prepareStatement("insert into userAc(fname,lname,pswd,addr,email,mobno) values (?,?,?,?,?,?)");
+            Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","");
+            PreparedStatement pst=con.prepareStatement("insert into userAc(fullname,email,password,confirmpasswod,grade) values (?,?,?,?,?,)");
             pst.setString(1, fullname);
                         pst.setString(2, email);
                                     pst.setString(3, password);
+                                         pst.setString(4, confirm password);
+                                                pst.setString(5, grade);
                                                
                                                 
                                                 int rowCount = pst.executeUpdate();
