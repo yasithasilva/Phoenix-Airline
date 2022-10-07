@@ -72,13 +72,10 @@ public class userS extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-         String userid=request.getParameter("fname");
-       String fullname=request.getParameter("lname");
-       String email=request.getParameter("pswd");
-       String ticketid=request.getParameter("addr");
-        String email=request.getParameter("email");
-        String mobno=request.getParameter("mobno");
-       
+         String userid=request.getParameter("userid");
+       String fullname=request.getParameter("fullname");
+       String email=request.getParameter("email");
+       String ticketid=request.getParameter("ticketid");
         RequestDispatcher dispatcher=null;
        
         try {
@@ -87,17 +84,15 @@ public class userS extends HttpServlet {
                    
 
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/DBWEB?useSSL=false","root","");
-            PreparedStatement pst=con.prepareStatement("insert into userAc(fname,lname,pswd,addr,email,mobno) values (?,?,?,?,?,?)");
-            pst.setString(1, fname);
-                        pst.setString(2, lname);
-                                    pst.setString(3, pswd);
-                                                pst.setString(4, addr);
-                                                    pst.setString(5, email);
-                                                        pst.setString(4, mobno);
+            Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/phoenix airline","root","");
+            PreparedStatement pst=con.prepareStatement("insert into user(userid,fullname,email,ticketid) values (?,?,?,?,)");
+            pst.setString(1, userid);
+                        pst.setString(2, fullname);
+                                    pst.setString(3, email);
+                                                pst.setString(4, ticketid;
                                                 
                                                 int rowCount = pst.executeUpdate();
-                                                dispatcher=request.getRequestDispatcher("register.jsp");
+                                                dispatcher=request.getRequestDispatcher("userm.jsp");
          
             dispatcher.forward(request, response);
             
