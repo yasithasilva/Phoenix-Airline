@@ -32,18 +32,6 @@ SELECT Destination,Flight ID from flight_details
 WHERE uname = username;
 
 
-
-
-
-INSERT INTO stafflogin
-SELECT uname, password from temp_staff_details
-WHERE uname = username;
-
-
-
-
-
-
 CREATE DEFINER=`root`@`localhost` PROCEDURE `acceptg2` (IN `username` VARCHAR(255))  BEGIN
 Start TRANSACTION;
 INSERT INTO grade02staff
@@ -116,7 +104,7 @@ INSERT INTO `bookflight` (`uname`, `fullname`, `passportid`, `email`,'from',`to`
 
 
 --
--- Table structure for table `flightDetails`
+-- `flightDetails`
 --
 
 CREATE TABLE `flightsDetails` (
@@ -127,7 +115,7 @@ CREATE TABLE `flightsDetails` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `flightsDetails`
+-- `flightsDetails`
 --
 
 INSERT INTO `flightDetails` (`flightid`, `destination`, `departdate`, `chiefpilot`) VALUES
@@ -141,7 +129,7 @@ INSERT INTO `flightDetails` (`flightid`, `destination`, `departdate`, `chiefpilo
 
 
 --
--- Table structure for table `grade01staff`
+-- `grade01staff`
 --
 
 CREATE TABLE `grade01staff` (
@@ -151,7 +139,7 @@ CREATE TABLE `grade01staff` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `grade01staff`
+-- `grade01staff`
 --
 
 INSERT INTO `grade01staff` ( `fullname`, `email', 'password') VALUES
@@ -163,7 +151,7 @@ INSERT INTO `grade01staff` ( `fullname`, `email', 'password') VALUES
 
 
 --
--- Table structure for table `grade02staff`
+-- `grade02staff`
 --
 
 CREATE TABLE `grade02staff` (
@@ -173,7 +161,7 @@ CREATE TABLE `grade02staff` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `grade02staff`
+-- `grade02staff`
 --
 
 INSERT INTO `grade02staff` (`fullname`, `email`, `password`) VALUES
@@ -185,7 +173,7 @@ INSERT INTO `grade02staff` (`fullname`, `email`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `stafflogin`
+-- `stafflogin`
 --
 
 CREATE TABLE `stafflogin` (
@@ -194,7 +182,7 @@ CREATE TABLE `stafflogin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `stafflogin`
+-- `stafflogin`
 --
 
 INSERT INTO `stafflogin` (`username`, `Password`) VALUES
@@ -211,7 +199,7 @@ INSERT INTO `stafflogin` (`username`, `Password`) VALUES
 
 
 --
--- Table structure for table `stafflogin02`
+-- `stafflogin02`
 --
 
 CREATE TABLE `stafflogin02` (
@@ -220,7 +208,7 @@ CREATE TABLE `stafflogin02` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `stafflogin02`
+-- `stafflogin02`
 --
 
 INSERT INTO `stafflogin02` (`username`, `password`) VALUES
@@ -230,7 +218,7 @@ INSERT INTO `stafflogin02` (`username`, `password`) VALUES
 ( 'Nimesh Karunarathna', 'PSY%ss5NKM');
 
 --
--- Table structure for table `ticketdetails`
+-- `ticketdetails`
 --
 
 CREATE TABLE `ticketdetails` (
@@ -242,7 +230,7 @@ CREATE TABLE `ticketdetails` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `ticketdetails`
+-- `ticketdetails`
 --
 
 INSERT INTO `ticketdetails` ('flightid', 'passengerid', 'departdate','destination',' seatnumber') VALUES
@@ -257,7 +245,7 @@ INSERT INTO `ticketdetails` ('flightid', 'passengerid', 'departdate','destinatio
 
 
 --
--- Table structure for table `userdetails`
+--  `userdetails`
 --
 
 CREATE TABLE `userdetails` (
@@ -268,7 +256,7 @@ CREATE TABLE `userdetails` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `userdetails`
+--`userdetails`
 --
 
 INSERT INTO `userdetails` (`userid`, `fullname`, `email`, `ticketid`) VALUES
@@ -280,7 +268,7 @@ INSERT INTO `userdetails` (`userid`, `fullname`, `email`, `ticketid`) VALUES
 
 
 --
--- Table structure for table `userlogin`
+--  `userlogin`
 --
 
 CREATE TABLE `userlogin` (
@@ -289,7 +277,7 @@ CREATE TABLE `userlogin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `userlogin`
+-- `userlogin`
 --
 
 INSERT INTO `userlogin` (`username`, `password`) VALUES
