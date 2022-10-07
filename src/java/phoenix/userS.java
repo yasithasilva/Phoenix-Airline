@@ -1,7 +1,7 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * @param response servlet respons
  */
 package phoenix;
 
@@ -72,7 +72,38 @@ public class userS extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+         String userid=request.getParameter("fname");
+       String fullname=request.getParameter("lname");
+       String email=request.getParameter("pswd");
+       String ticketid=request.getParameter("addr");
+        String email=request.getParameter("email");
+        String mobno=request.getParameter("mobno");
+       
+        RequestDispatcher dispatcher=null;
+       
+        try {
+             Statement st ;
+
+                   
+
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/DBWEB?useSSL=false","root","");
+            PreparedStatement pst=con.prepareStatement("insert into userAc(fname,lname,pswd,addr,email,mobno) values (?,?,?,?,?,?)");
+            pst.setString(1, fname);
+                        pst.setString(2, lname);
+                                    pst.setString(3, pswd);
+                                                pst.setString(4, addr);
+                                                    pst.setString(5, email);
+                                                        pst.setString(4, mobno);
+                                                
+                                                int rowCount = pst.executeUpdate();
+                                                dispatcher=request.getRequestDispatcher("register.jsp");
+         
+            dispatcher.forward(request, response);
+            
+        } catch (Exception e) {
+        }
+    }
     }
 
     /**

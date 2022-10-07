@@ -13,10 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author Binath Lakvidu
- */
+
 @WebServlet(name = "ticketB", urlPatterns = {"/ticketB"})
 public class ticketB extends HttpServlet {
 
@@ -58,9 +55,9 @@ public class ticketB extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
+        // processRequest(request, response);
+          
+           
     /**
      * Handles the HTTP <code>POST</code> method.
      *
@@ -72,7 +69,40 @@ public class ticketB extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        String from=request.getParameter("from");
+       String to=request.getParameter("to");
+       String date=request.getParameter("date");
+       String class=request.getParameter("class");
+        String person=request.getParameter("person");
+        String payment=request.getParameter("payment");
+       
+        RequestDispatcher dispatcher=null;
+       
+        try {
+             Statement st ;
+
+                   
+
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:phoenix_airline_db","root","");
+            PreparedStatement pst=con.prepareStatement("insert into userAc(from,to,date,class,persons,payment) values (?,?,?,?,?,?)");
+            pst.setString(1, from);
+                        pst.setString(2, to);
+                                    pst.setString(3, date);
+                                                pst.setString(4, class);
+                                                    pst.setString(5, person);
+                                                        pst.setString(4, payment);
+                                                
+                                                int rowCount = pst.executeUpdate();
+                                                dispatcher=request.getRequestDispatcher("ticketbook.jsp");
+         
+            dispatcher.forward(request, response);
+            
+        } catch (Exception e) {
+        }
+    }
+    }
+
     }
 
     /**
