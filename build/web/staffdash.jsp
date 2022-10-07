@@ -57,6 +57,7 @@
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                         <li><a href="index.html">Home</a></li>
+                        <li><a href="admindash.jsp">Admin</a></li>
                         <li><a href="staffdash.jsp" class="active">Dashboard</a></li>
                         <li><a href="flightm.jsp">Flight Menu</a></li>
                         <li><a href="ticketm.jsp">Ticket Menu</a></li>
@@ -79,7 +80,7 @@
       <div class="row">
         <div class="col-lg-12">
           <h4>Staff Member Dashboard</h4>
-          <h2>Acess Manging Portals Below</h2>
+          <h2>Access Managing Portals Below</h2>
           
           <div class="main-button"><a href="flightm.jsp">  Manage Flights   </a></div>
           <div class="main-button"><a href="ticketm.jsp">  Manage Tickets  </a></div>

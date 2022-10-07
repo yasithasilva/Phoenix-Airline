@@ -1,6 +1,6 @@
 <%-- 
-    Document   : staffdash
-    Created on : Oct 6, 2022, 1:11:11 AM
+    Document   : staffreq
+    Created on : Oct 7, 2022, 10:37:55 AM
     Author     : Yasitha Silva
 --%>
 
@@ -8,14 +8,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
-    <meta charset="utf-8">
+        <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>Staff Dashboard</title>
-    <link rel="icon" type="image/x-icon" href="assets/images/icon.png" >
+    <title>Staff Requests</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +24,6 @@
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-
     </head>
     <body>
         
@@ -57,12 +54,12 @@
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="admindash.jsp">Admin</a></li>
-                        <li><a href="staffdash.jsp" class="active">Dashboard</a></li>
-                        <li><a href="flightm.jsp">Flight Menu</a></li>
-                        <li><a href="ticketm.jsp">Ticket Menu</a></li>
-                        <li><a href="userm.jsp">User Menu</a></li>
-                        <li><a href="about.jsp">About</a></li>
+                        <li><a href="admindash.jsp">Dashboard</a></li>
+                        <li><a href="checkflight.jsp">Check Flight</a></li>
+                        <li><a href="ticketbook.jsp">Book Tickets</a></li>
+                        <li><a href="stafflogin.jsp">Staff Login</a></li>
+                        <li><a href="staffreq.jsp" class="active">Staff Requests</a></li>
+
                     </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -79,16 +76,12 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <h4>Staff Member Dashboard</h4>
-          <h2>Access Managing Portals Below</h2>
-          
-          <div class="main-button"><a href="flightm.jsp">  Manage Flights   </a></div>
-          <div class="main-button"><a href="ticketm.jsp">  Manage Tickets  </a></div>
-          <div class="main-button"><a href="userm.jsp">    Manage Users    </a></div>
+          <h2>Staff Member Account Requests</h2>
         </div>
       </div>
     </div>
   </div>
+
 
 
   <footer>

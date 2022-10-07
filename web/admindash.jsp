@@ -1,6 +1,6 @@
 <%-- 
-    Document   : staffdash
-    Created on : Oct 6, 2022, 1:11:11 AM
+    Document   : admindash
+    Created on : Oct 7, 2022, 10:35:34 AM
     Author     : Yasitha Silva
 --%>
 
@@ -8,6 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <head>
         
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -57,12 +58,12 @@
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="admindash.jsp">Admin</a></li>
-                        <li><a href="staffdash.jsp" class="active">Dashboard</a></li>
+                        <li><a href="admindash.jsp" class="active">Dashboard</a></li>
                         <li><a href="flightm.jsp">Flight Menu</a></li>
                         <li><a href="ticketm.jsp">Ticket Menu</a></li>
                         <li><a href="userm.jsp">User Menu</a></li>
-                        <li><a href="about.jsp">About</a></li>
+                        <li><a href="staffreq.jsp">Staff Requests</a></li>
+                        
                     </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -79,12 +80,13 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <h4>Staff Member Dashboard</h4>
-          <h2>Access Managing Portals Below</h2>
+          <h4>Admin Dashboard</h4>
+          <h2>Acess Manging Portals Below</h2>
           
           <div class="main-button"><a href="flightm.jsp">  Manage Flights   </a></div>
           <div class="main-button"><a href="ticketm.jsp">  Manage Tickets  </a></div>
           <div class="main-button"><a href="userm.jsp">    Manage Users    </a></div>
+          <div class="main-button"><a href="staffreq.jsp">    Staff Requests    </a></div>
         </div>
       </div>
     </div>

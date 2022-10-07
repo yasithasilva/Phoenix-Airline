@@ -55,6 +55,7 @@
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                       <li><a href="index.html">Home</a></li>
+                      <li><a href="admindash.jsp">Admin</a></li>
                       <li><a href="staffdash.jsp">Dashboard</a></li>
                       <li><a href="flightm.jsp" >Flight Menu</a></li>
                       <li><a href="ticketm.jsp" >Ticket Menu</a></li>
