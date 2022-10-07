@@ -84,7 +84,7 @@ public class ticketB extends HttpServlet {
                    
 
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/DBWEB?useSSL=false","root","");
+            Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:phoenix_airline_db","root","");
             PreparedStatement pst=con.prepareStatement("insert into userAc(from,to,date,class,persons,payment) values (?,?,?,?,?,?)");
             pst.setString(1, from);
                         pst.setString(2, to);
