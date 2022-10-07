@@ -3,39 +3,9 @@
     Created on : Oct 6, 2022, 1:02:26 AM
     Author     : Yasitha Silva
 --%>
-<%@page import  = "javax.servlet.http.Cookie"%>
- <%@page import  = "java.io.PrintWriter"%>
- <%@page import="model.dbconnect"%>
- <%@page import="model.cookieverify"%>
-<h2><%             
-Cookie[] ck = request.getCookies();
-String uname = "none";
-cookieverify obj=new cookieverify();
-                            //response.setContentType("text/html");
-                            //PrintWriter out =response.getWriter();
-        
-                            //Cookie[] ck = request.getCookies();
-                            //String name=ck[0].getValue();
-                            //out.print("Welcome "+name);
-                            //String uname = "none";
-                      
-                    if(!(request.getCookies()==null))
-                    {
-                    out.print(obj.verifyindex(request, response));
-                   
-                    
-                    uname = "none";
-                        for (Cookie aCookie : ck) {
-                            String names = aCookie.getName();
- 
-                        if (names.equals("uname")) {
-                            uname = aCookie.getValue();
-                              break;
-                                }       }}
-                        if(uname=="none"){response.sendRedirect("index.jsp");}        
-                      
-                            
-      %></h2>	
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+          
+      	
 
 <!DOCTYPE html>
 <html>
@@ -186,28 +156,7 @@ cookieverify obj=new cookieverify();
                   </th>
                 </table>
                    
-                   <%@page import="java.io.PrintWriter"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="java.util.List"%>
-          
-          <%
-              
-        //PrintWriter out=response.getWriter();  
-        //out.println("<a href='index.html'>Add Employee</a>");  
-        out.println("<br>");  
-          
-        List<model.userdetailsbean> list=model.dbconnect.getuserdetails();  
-          
-        out.print("<table border='1' width='100%'");  
-        out.print("<tr><th>Username</th><th>Fullname</th><th>Email</th><th></th><th></th>");  
-        for(model.userdetailsbean e:list){  
-         out.print("<form action='./updateuser' method='post'><tr><td>"+e.getusername()+"<input type='hidden' name='username' value="+e.getusername()+"> </td><td><input type='text' name='fullname' value="+e.getfullname()+"> </td><td><input type='text' name='email' value="+e.getemail()+"> </td><td><input type='submit' value='Update'>  </form></td> <td> <form action='./deleteusers' method='post'><input type='hidden' name='username' value="+e.getusername()+"> <input type='submit' value='Delete'>  </form></td> </tr>");  
-        }  
-        out.print("</table>");  
-        out.close(); 
-          %>
-                    
-              </div>                       
+                   
 
                      <button class="signup"> Sign Up </button>
                   
@@ -226,7 +175,7 @@ cookieverify obj=new cookieverify();
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <p>Copyright © 2022 <a href="#">Phoenix Airlines</a> Company. All rights reserved. 
+          <p>Copyright Â© 2022 <a href="#">Phoenix Airlines</a> Company. All rights reserved. 
           <br>Design: <a href="" target="_blank" title="">NSBM Green University</a></p>
         </div>
       </div>
