@@ -82,6 +82,69 @@
     </div>
   </div>
 
+    <div class="reservation-form">
+    <div class="container">
+      <div class="topic">
+        
+      </div>
+      <div class="row">
+        <tabel>
+          <div class="col-lg-12">
+          <form id="reservation-form" name="gs" method="submit" role="search" action="#">
+            <div class="row">
+               <div class="table1">
+                <table>
+                    <tr>
+                      <td>
+                        
+                        <input class="box" type="password" name="password" class="name" placeholder="Requset Name" autocomplete="on" required>
+                    </td>
+                    <td>
+                       <div class="border-button"><a href="signin.jsp">Accept</a></div> 
+                    </td>
+                    <td>
+                       <div class="border-button"><a href="signin.jsp">Reject</a></div> 
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        
+                        <input class="box" type="password" name="password" class="name" placeholder="Requset Name" autocomplete="on" required>
+                    </td>
+                    <td>
+                       <div class="border-button"><a href="signin.jsp">Accept</a></div> 
+                    </td>
+                    <td>
+                       <div class="border-button"><a href="signin.jsp">Reject</a></div> 
+                    </td> 
+                    </tr>
+                       <tr>
+                        <td>
+                        
+                        <input class="box" type="password" name="password" class="name" placeholder="Requset Name" autocomplete="on" required>
+                    </td>
+                    <td>
+                       <div class="border-button"><a href="signin.jsp">Accept</a></div> 
+                    </td>
+                    <td>
+                       <div class="border-button"><a href="signin.jsp">Reject</a></div> 
+                    </td> 
+                    </tr>
+                </table>
+                    
+              </div>                       
+
+                     
+ 
+                    
+             
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 
   <footer>
