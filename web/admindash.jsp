@@ -2,7 +2,14 @@
     Document   : about
     Created on : Oct 6, 2022, 1:02:26 AM
     Author     : Yasitha Silva
+<<<<<<< HEAD
 --%><%@page contentType="text/html" pageEncoding="UTF-8"%><!DOCTYPE html>
+=======
+--%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<!DOCTYPE html>
+>>>>>>> 0237f06933917514e63abfa19dc6775a364bdeaf
 <html>
     <head>
         <head>
