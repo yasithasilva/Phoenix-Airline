@@ -95,14 +95,14 @@ public class gOstaff extends HttpServlet {
 
             Class.forName("com.mysql.jdbc.Driver");
             Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/DBWEB?useSSL=false","root","");
-            PreparedStatement pst=con.prepareStatement("insert into userAc(fullname, email, password) values (?,?,?)");
+            PreparedStatement pst=con.prepareStatement("insert into grade1staff(fullname, email, password) values (?,?,?)");
             pst.setString(1, fullname);
                         pst.setString(2, email);
                                     pst.setString(3, password);
                                                 
                                                 
                                                 int rowCount = pst.executeUpdate();
-                                                dispatcher=request.getRequestDispatcher("staffdash.jsp");
+                                                dispatcher=request.getRequestDispatcher("signupstaff.jsp");
          
             dispatcher.forward(request, response);
             
