@@ -94,7 +94,7 @@ public class ticketB extends HttpServlet {
                                                         pst.setString(4, payment);
                                                 
                                                 int rowCount = pst.executeUpdate();
-                                                dispatcher=request.getRequestDispatcher("ticket.jsp");
+                                                dispatcher=request.getRequestDispatcher("ticketbook.jsp");
          
             dispatcher.forward(request, response);
             
