@@ -1,3 +1,8 @@
+<%-- 
+    Document   : about
+    Created on : Oct 6, 2022, 1:02:26 AM
+    Author     : Yasitha Silva
+--%>
 <%@page import  = "javax.servlet.http.Cookie"%>
  <%@page import  = "java.io.PrintWriter"%>
  <%@page import="model.dbconnect"%>
