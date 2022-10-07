@@ -56,40 +56,8 @@ public class ticketB extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // processRequest(request, response);
-          String fname=request.getParameter("fname");
-       String lname=request.getParameter("lname");
-       String pswd=request.getParameter("pswd");
-       String addr=request.getParameter("addr");
-        String email=request.getParameter("email");
-        String mobno=request.getParameter("mobno");
-       
-        RequestDispatcher dispatcher=null;
-       
-        try {
-             Statement st ;
-
-                   
-
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/DBWEB?useSSL=false","root","");
-            PreparedStatement pst=con.prepareStatement("insert into userAc(fname,lname,pswd,addr,email,mobno) values (?,?,?,?,?,?)");
-            pst.setString(1, fname);
-                        pst.setString(2, lname);
-                                    pst.setString(3, pswd);
-                                                pst.setString(4, addr);
-                                                    pst.setString(5, email);
-                                                        pst.setString(4, mobno);
-                                                
-                                                int rowCount = pst.executeUpdate();
-                                                dispatcher=request.getRequestDispatcher("register.jsp");
-         
-            dispatcher.forward(request, response);
-            
-        } catch (Exception e) {
-        }
-    }
-    }
-
+          
+           
     /**
      * Handles the HTTP <code>POST</code> method.
      *
@@ -116,17 +84,17 @@ public class ticketB extends HttpServlet {
                    
 
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/DBWEB?useSSL=false","root","");
+            Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:phoenix_airline_db","root","");
             PreparedStatement pst=con.prepareStatement("insert into userAc(from,to,date,class,persons,payment) values (?,?,?,?,?,?)");
             pst.setString(1, from);
                         pst.setString(2, to);
                                     pst.setString(3, date);
-                                                pst.setString(4, addr);
-                                                    pst.setString(5, email);
-                                                        pst.setString(4, mobno);
+                                                pst.setString(4, class);
+                                                    pst.setString(5, person);
+                                                        pst.setString(4, payment);
                                                 
                                                 int rowCount = pst.executeUpdate();
-                                                dispatcher=request.getRequestDispatcher("register.jsp");
+                                                dispatcher=request.getRequestDispatcher("ticketbook.jsp");
          
             dispatcher.forward(request, response);
             
