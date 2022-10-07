@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package phoenix;
 
 import java.io.IOException;
@@ -69,8 +64,12 @@ public class ticketB extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String username=request.getParameter("username");
+        String fullname=request.getParameter("fullname");
+        String passportid=request.getParameter("passportid");
+        String email=request.getParameter("email");
         String from=request.getParameter("from");
-       String to=request.getParameter("to");
+        String to=request.getParameter("to");   
        String date=request.getParameter("date");
        String class=request.getParameter("class");
         String person=request.getParameter("person");
@@ -85,13 +84,17 @@ public class ticketB extends HttpServlet {
 
             Class.forName("com.mysql.jdbc.Driver");
             Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:phoenix_airline_db","root","");
-            PreparedStatement pst=con.prepareStatement("insert into userAc(from,to,date,class,persons,payment) values (?,?,?,?,?,?)");
-            pst.setString(1, from);
-                        pst.setString(2, to);
-                                    pst.setString(3, date);
-                                                pst.setString(4, class);
-                                                    pst.setString(5, person);
-                                                        pst.setString(4, payment);
+            PreparedStatement pst=con.prepareStatement("insert into bookflight(username,fullname,passportid,email,from,to,date,class,persons,payment) values (?,?,?,?,?,?)");
+            pst.setString(1, username);
+                         pst.setString(1, fullname;
+                              pst.setString(1, passportid;
+                                    pst.setString(1, email);
+                                            pst.setString(1, from);
+                                                pst.setString(2, to);
+                                                    pst.setString(3, date);
+                                                       pst.setString(4, class);
+                                                          pst.setString(5, person);
+                                                             pst.setString(4, payment);
                                                 
                                                 int rowCount = pst.executeUpdate();
                                                 dispatcher=request.getRequestDispatcher("ticketbook.jsp");
