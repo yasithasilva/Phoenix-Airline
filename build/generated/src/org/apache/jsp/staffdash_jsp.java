@@ -3,12 +3,8 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
-import javax.servlet.http.Cookie;
-import java.io.PrintWriter;
-import model.dbconnect;
-import model.cookieverify;
 
-public final class staffdashone_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class staffdash_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -34,7 +30,7 @@ public final class staffdashone_jsp extends org.apache.jasper.runtime.HttpJspBas
     PageContext _jspx_page_context = null;
 
     try {
-      response.setContentType("text/html");
+      response.setContentType("text/html;charset=UTF-8");
       pageContext = _jspxFactory.getPageContext(this, request, response,
       			null, true, 8192, true);
       _jspx_page_context = pageContext;
@@ -46,40 +42,8 @@ public final class staffdashone_jsp extends org.apache.jasper.runtime.HttpJspBas
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
       out.write("\r\n");
-      out.write(" \r\n");
-      out.write(" \r\n");
-      out.write(" \r\n");
-      out.write("<h2>");
-             
-Cookie[] ck = request.getCookies();
-String uname = "none";
-cookieverify obj=new cookieverify();
-                            //response.setContentType("text/html");
-                            //PrintWriter out =response.getWriter();
-        
-                            //Cookie[] ck = request.getCookies();
-                            //String name=ck[0].getValue();
-                            //out.print("Welcome "+name);
-                            //String uname = "none";
-                      
-                    if(!(request.getCookies()==null))
-                    {
-                    out.print(obj.verifyindex(request, response));
-                   
-                    
-                    uname = "none";
-                        for (Cookie aCookie : ck) {
-                            String names = aCookie.getName();
- 
-                        if (names.equals("uname")) {
-                            uname = aCookie.getValue();
-                              break;
-                                }       }}
-                        if(uname=="none"){response.sendRedirect("index.jsp");}        
-                      
-                            
-      
-      out.write("</h2>\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html>\r\n");
       out.write("    <head>\r\n");
@@ -90,6 +54,7 @@ cookieverify obj=new cookieverify();
       out.write("    <link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap\" rel=\"stylesheet\">\r\n");
       out.write("\r\n");
       out.write("    <title>Staff Dashboard</title>\r\n");
+      out.write("    <link rel=\"icon\" type=\"image/x-icon\" href=\"assets/images/icon.png\" >\r\n");
       out.write("\r\n");
       out.write("    <!-- Bootstrap core CSS -->\r\n");
       out.write("    <link href=\"vendor/bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\">\r\n");
@@ -125,15 +90,17 @@ cookieverify obj=new cookieverify();
       out.write("                <nav class=\"main-nav\">\r\n");
       out.write("                    <!-- ***** Logo Start ***** -->\r\n");
       out.write("                    <a href=\"index.html\" class=\"logo\">\r\n");
-      out.write("                        <img src=\"assets/images/logo.png\" alt=\"\">\r\n");
+      out.write("                        <img src=\"assets/images/logoup.png\" alt=\"\">\r\n");
       out.write("                    </a>\r\n");
       out.write("                    <!-- ***** Logo End ***** -->\r\n");
       out.write("                    <!-- ***** Menu Start ***** -->\r\n");
       out.write("                    <ul class=\"nav\">\r\n");
       out.write("                        <li><a href=\"index.html\">Home</a></li>\r\n");
-      out.write("                        <li><a href=\"checkflight.jsp\">Check Flights</a></li>\r\n");
-      out.write("                        <li><a href=\"ticketbook.jsp\">Book Tickets</a></li>\r\n");
-      out.write("                        <li><a href=\"stafflogin.jsp\" class=\"active\">Staff Login</a></li>\r\n");
+      out.write("                        <li><a href=\"admindash.jsp\">Admin</a></li>\r\n");
+      out.write("                        <li><a href=\"staffdash.jsp\" class=\"active\">Dashboard</a></li>\r\n");
+      out.write("                        <li><a href=\"flightm.jsp\">Flight Menu</a></li>\r\n");
+      out.write("                        <li><a href=\"ticketm.jsp\">Ticket Menu</a></li>\r\n");
+      out.write("                        <li><a href=\"userm.jsp\">User Menu</a></li>\r\n");
       out.write("                        <li><a href=\"about.jsp\">About</a></li>\r\n");
       out.write("                    </ul>   \r\n");
       out.write("                    <a class='menu-trigger'>\r\n");
@@ -151,103 +118,17 @@ cookieverify obj=new cookieverify();
       out.write("    <div class=\"container\">\r\n");
       out.write("      <div class=\"row\">\r\n");
       out.write("        <div class=\"col-lg-12\">\r\n");
-      out.write("          <h2>Details Management System</h2>\r\n");
+      out.write("          <h4>Staff Member Dashboard</h4>\r\n");
+      out.write("          <h2>Access Managing Portals Below</h2>\r\n");
+      out.write("          \r\n");
+      out.write("          <div class=\"main-button\"><a href=\"flightm.jsp\">  Manage Flights   </a></div>\r\n");
+      out.write("          <div class=\"main-button\"><a href=\"ticketm.jsp\">  Manage Tickets  </a></div>\r\n");
+      out.write("          <div class=\"main-button\"><a href=\"userm.jsp\">    Manage Users    </a></div>\r\n");
       out.write("        </div>\r\n");
       out.write("      </div>\r\n");
       out.write("    </div>\r\n");
       out.write("  </div>\r\n");
       out.write("\r\n");
-      out.write("  <div class=\"more-info reservation-info\">\r\n");
-      out.write("    <div class=\"container\">\r\n");
-      out.write("      <div class=\"row\">\r\n");
-      out.write("        <div class=\"col-lg-4 col-sm-6\">\r\n");
-      out.write("          <div class=\"info-item\">\r\n");
-      out.write("            <i class=\"fa fa-phone\"></i>\r\n");
-      out.write("            <h4>Make a Phone Call</h4>\r\n");
-      out.write("            <a href=\"#\">+123 456 789 (0)</a>\r\n");
-      out.write("          </div>\r\n");
-      out.write("        </div>\r\n");
-      out.write("        <div class=\"col-lg-4 col-sm-6\">\r\n");
-      out.write("          <div class=\"info-item\">\r\n");
-      out.write("            <i class=\"fa fa-envelope\"></i>\r\n");
-      out.write("            <h4>Contact Us via Email</h4>\r\n");
-      out.write("            <a href=\"#\">company@email.com</a>\r\n");
-      out.write("          </div>\r\n");
-      out.write("        </div>\r\n");
-      out.write("        <div class=\"col-lg-4 col-sm-6\">\r\n");
-      out.write("          <div class=\"info-item\">\r\n");
-      out.write("            <i class=\"fa fa-map-marker\"></i>\r\n");
-      out.write("            <h4>Visit Our Offices</h4>\r\n");
-      out.write("            <a href=\"#\">24th Street North Avenue London, UK</a>\r\n");
-      out.write("          </div>\r\n");
-      out.write("        </div>\r\n");
-      out.write("      </div>\r\n");
-      out.write("    </div>\r\n");
-      out.write("  </div>\r\n");
-      out.write(" \r\n");
-      out.write("<div class=\"search\"><input class=\"searchbox\" type=\"text\" placeholder=\"Enter Flight ID\"></div>\r\n");
-      out.write("<div class=\"topic\">\r\n");
-      out.write("  <h4>Add Flight</h4>\r\n");
-      out.write("</div>\r\n");
-      out.write("  <div class=\"reservation-form\">\r\n");
-      out.write("    <div class=\"container\">\r\n");
-      out.write("     <div class=\"row\">\r\n");
-      out.write("      <tabel>\r\n");
-      out.write("          <div class=\"col-lg-12\">\r\n");
-      out.write("          <form id=\"reservation-form\" name=\"gs\" method=\"submit\" role=\"search\" action=\"#\">\r\n");
-      out.write("            <div class=\"row\">\r\n");
-      out.write("               <div class=\"table2\">\r\n");
-      out.write("                <table>\r\n");
-      out.write("                    <th>\r\n");
-      out.write("                      <tr>\r\n");
-      out.write("                        <td>\r\n");
-      out.write("                          <label for=\"Name\" class=\"form-label\">Flight ID </label>\r\n");
-      out.write("                          <input class=\"box\" type=\"text\" name=\"name\" class=\"Name\"  autocomplete=\"on\" required>\r\n");
-      out.write("                     </td>\r\n");
-      out.write("                      </tr>\r\n");
-      out.write("                    \r\n");
-      out.write("                    <tr>\r\n");
-      out.write("                      <td>\r\n");
-      out.write("                        <label for=\"Name\" class=\"form-label\">Destination</label>\r\n");
-      out.write("                        <input class=\"box\" type=\"text\" name=\"email\" class=\"name\"  autocomplete=\"on\" required>\r\n");
-      out.write("                    </td>\r\n");
-      out.write("                    </tr>\r\n");
-      out.write("                    <tr>\r\n");
-      out.write("                      <td>\r\n");
-      out.write("                        <label for=\"Name\" class=\"form-label\">Departure Date</label>\r\n");
-      out.write("                        <input class=\"box\" type=\"text\" name=\"password\" class=\"Name\"  autocomplete=\"on\" required>\r\n");
-      out.write("                   </td>\r\n");
-      out.write("                    </tr>\r\n");
-      out.write("                  \r\n");
-      out.write("                  <tr>\r\n");
-      out.write("                    <td>\r\n");
-      out.write("                      <label for=\"Name\" class=\"form-label\">Chief Pilot</label>\r\n");
-      out.write("                      <input class=\"box\" type=\"text\" name=\"passwordconfirm\" class=\"name\"  autocomplete=\"on\" required>\r\n");
-      out.write("                  </td>\r\n");
-      out.write("                  </tr>\r\n");
-      out.write("                \r\n");
-      out.write("                  \r\n");
-      out.write("                  </th>\r\n");
-      out.write("                </table>\r\n");
-      out.write("              </div>        \r\n");
-      out.write("              <center>\r\n");
-      out.write("                <div class=\"border-button\"><a href=\"#\">Add</a>\r\n");
-      out.write("                  <a href=\"#\">Cancel</a></div>\r\n");
-      out.write("              </center>\r\n");
-      out.write("              \r\n");
-      out.write("\r\n");
-      out.write("              \r\n");
-      out.write("                  \r\n");
-      out.write("        \r\n");
-      out.write("                \r\n");
-      out.write("                    \r\n");
-      out.write("             \r\n");
-      out.write("            </div>\r\n");
-      out.write("          </form>\r\n");
-      out.write("        </div>\r\n");
-      out.write("      </div>\r\n");
-      out.write("    </div>\r\n");
-      out.write("  </div>\r\n");
       out.write("\r\n");
       out.write("  <footer>\r\n");
       out.write("    <div class=\"container\">\r\n");
