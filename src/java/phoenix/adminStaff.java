@@ -77,14 +77,14 @@ public class adminStaff extends HttpServlet {
                    
 
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","");
+            Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/phoenix_airline_db","root","");
             PreparedStatement pst=con.prepareStatement("insert into adminlogin(username,password) values (?,?,)");
             pst.setString(1, username);
                         pst.setString(2, password);
                                    
                                                 
                                                 int rowCount = pst.executeUpdate();
-                                                dispatcher=request.getRequestDispatcher("register.jsp");
+                                                dispatcher=request.getRequestDispatcher("admindash.jsp");
          
             dispatcher.forward(request, response);
             
