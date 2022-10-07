@@ -87,7 +87,7 @@ public class gTstaff extends HttpServlet {
                    
 
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","");
+            Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/phoenix_airline_db","root","");
             PreparedStatement pst=con.prepareStatement("insert into userAc(fullname,email,password,confirmpasswod,grade) values (?,?,?,?,?,)");
             pst.setString(1, fullname);
                         pst.setString(2, email);
