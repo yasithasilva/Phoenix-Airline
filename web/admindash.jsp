@@ -3,39 +3,7 @@
     Created on : Oct 6, 2022, 1:02:26 AM
     Author     : Yasitha Silva
 --%>
-<%@page import  = "javax.servlet.http.Cookie"%>
- <%@page import  = "java.io.PrintWriter"%>
- <%@page import="model.dbconnect"%>
- <%@page import="model.cookieverify"%>
-<h2><%             
-Cookie[] ck = request.getCookies();
-String uname = "none";
-cookieverify obj=new cookieverify();
-                            //response.setContentType("text/html");
-                            //PrintWriter out =response.getWriter();
-        
-                            //Cookie[] ck = request.getCookies();
-                            //String name=ck[0].getValue();
-                            //out.print("Welcome "+name);
-                            //String uname = "none";
-                      
-                    if(!(request.getCookies()==null))
-                    {
-                    out.print(obj.verifyindex(request, response));
-                   
-                    
-                    uname = "none";
-                        for (Cookie aCookie : ck) {
-                            String names = aCookie.getName();
- 
-                        if (names.equals("uname")) {
-                            uname = aCookie.getValue();
-                              break;
-                                }       }}
-                        if(uname=="none"){response.sendRedirect("index.jsp");}        
-                      
-                            
-      %></h2>	
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
 <html>
@@ -129,7 +97,7 @@ cookieverify obj=new cookieverify();
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <p>Copyright © 2022 <a href="#">Phoenix Airlines</a> Company. All rights reserved. 
+          <p>Copyright Â© 2022 <a href="#">Phoenix Airlines</a> Company. All rights reserved. 
           <br>Design: <a href="" target="_blank" title="">NSBM Green University</a></p>
         </div>
       </div>
