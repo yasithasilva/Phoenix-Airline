@@ -79,12 +79,9 @@ public class adminStaff extends HttpServlet {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","");
             PreparedStatement pst=con.prepareStatement("insert into adminlogin(username,password) values (?,?,)");
-            pst.setString(1, fname);
-                        pst.setString(2, lname);
-                                    pst.setString(3, pswd);
-                                                pst.setString(4, addr);
-                                                    pst.setString(5, email);
-                                                        pst.setString(4, mobno);
+            pst.setString(1, username);
+                        pst.setString(2, password);
+                                   
                                                 
                                                 int rowCount = pst.executeUpdate();
                                                 dispatcher=request.getRequestDispatcher("register.jsp");
