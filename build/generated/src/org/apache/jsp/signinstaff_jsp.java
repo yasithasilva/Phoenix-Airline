@@ -52,7 +52,7 @@ public final class signinstaff_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("     <link href=\"https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap\" rel=\"stylesheet\">\r\n");
       out.write("\r\n");
-      out.write("    <title>Book Tickets</title>\r\n");
+      out.write("    <title>Sign in staff</title>\r\n");
       out.write("    <link rel=\"icon\" type=\"image/x-icon\" href=\"assets/images/icon.png\" >\r\n");
       out.write("\r\n");
       out.write("    <!-- Bootstrap core CSS -->\r\n");
