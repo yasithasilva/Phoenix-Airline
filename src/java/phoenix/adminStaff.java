@@ -53,32 +53,7 @@ public class adminStaff extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        String username=request.getParameter("username");
-       String password=request.getParameter("password");
-       
-       
-        RequestDispatcher dispatcher=null;
-       
-        try {
-             Statement st ;
-
-                   
-
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/DBWEB?useSSL=false","root","");
-            PreparedStatement pst=con.prepareStatement("insert into userAc(fname,lname,pswd,addr,email,mobno) values (?,?,?,?,?,?)");
-            pst.setString(1, username);
-                        pst.setString(2, password);
-                                          int rowCount = pst.executeUpdate();
-                                                dispatcher=request.getRequestDispatcher("register.jsp");
-         
-            dispatcher.forward(request, response);
             
-        } catch (Exception e) {
-        }
-    }
-    }
 
     /**
      * Handles the HTTP <code>POST</code> method.
@@ -91,12 +66,8 @@ public class adminStaff extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String fname=request.getParameter("fname");
-       String lname=request.getParameter("lname");
-       String pswd=request.getParameter("pswd");
-       String addr=request.getParameter("addr");
-        String email=request.getParameter("email");
-        String mobno=request.getParameter("mobno");
+        String username=request.getParameter("username");
+       String password=request.getParameter("password");
        
         RequestDispatcher dispatcher=null;
        
@@ -106,8 +77,8 @@ public class adminStaff extends HttpServlet {
                    
 
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/DBWEB?useSSL=false","root","");
-            PreparedStatement pst=con.prepareStatement("insert into userAc(fname,lname,pswd,addr,email,mobno) values (?,?,?,?,?,?)");
+            Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","");
+            PreparedStatement pst=con.prepareStatement("insert into adminlogin(username,password) values (?,?,)");
             pst.setString(1, fname);
                         pst.setString(2, lname);
                                     pst.setString(3, pswd);
